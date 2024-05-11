@@ -1,6 +1,6 @@
-FROM fedora
+FROM ubuntu
 WORKDIR /build
 COPY . .
-RUN dnf install -y rust cargo clang-devel liburing-devel
+RUN apt-get update && apt-get install -y cargo llvm-dev libclang-dev clang liburing-dev
 RUN cargo build
 RUN cargo test
