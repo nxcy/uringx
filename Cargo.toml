@@ -1,8 +1,11 @@
 [package]
 name = "uringx"
-version = "0.1.0"
+version = "0.0.1"
 edition = "2021"
+license = "MIT"
+description = "liburing bindings"
+repository = "https://github.com/nxcy/uringx"
 
 [build-dependencies]
-pkg-config = "0.3.30"
-bindgen = "0.69.4"
+pkg-config = "0.3"
+bindgen = "0.69"
