@@ -1,10 +1,11 @@
 [package]
 name = "uringx"
-version = "0.0.1"
+version = "0.0.2"
 edition = "2021"
 license = "MIT"
 description = "liburing bindings"
 repository = "https://github.com/nxcy/uringx"
+include = ["src", "Cargo.toml", "build.rs", "ffi.c"]
 
 [build-dependencies]
 pkg-config = "0.3"
