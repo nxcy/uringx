@@ -5,6 +5,7 @@ fn main() {
     pkg_config::probe_library("liburing-ffi").unwrap();
     bindgen::builder()
         .header("ffi.c")
+        .allowlist_function("io_uring.*")
         .generate()
         .unwrap()
         .write_to_file(PathBuf::from(env::var("OUT_DIR").unwrap()).join("bindings.rs"))
